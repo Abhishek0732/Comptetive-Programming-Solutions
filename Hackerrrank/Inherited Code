@@ -1,0 +1,12 @@
+// Included in the editor 
+
+struct BadLengthException
+{
+    int n;
+    BadLengthException(int e)
+    {
+        n=e;
+    }
+   int what(){ return n;}
+};
+

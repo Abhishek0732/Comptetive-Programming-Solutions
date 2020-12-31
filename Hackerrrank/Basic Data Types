@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstdio>
+#include<iomanip>
+using namespace std;
+
+int main() {
+   int a;
+  double b;
+  char c;
+  long double d;
+  long long e;
+  cin>>a>>e>>c>>b>>d;
+  cout<<a<<endl<<e<<endl<<c<<endl;
+  cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+  cout<<setprecision(3);
+  cout<<b<<endl;
+  cout<<setprecision(9);
+  cout<<d;
+    
+    return 0;
+}

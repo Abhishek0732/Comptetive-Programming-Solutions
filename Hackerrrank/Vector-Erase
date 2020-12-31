@@ -1,0 +1,26 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int y,t,e,f,g;
+    cin>>y;
+    vector<int> x;
+    while(y--)
+    {
+        cin>>g;
+        x.push_back(g);
+    }
+    cin>>t;
+    x.erase(x.begin()+(t-1));
+    cin>>e>>f;
+    x.erase(x.begin()+(e-1),x.begin()+f-1);
+    cout<<x.size()<<endl;
+    for( int i: x)
+    cout<<i<<" ";
+    return 0;
+}

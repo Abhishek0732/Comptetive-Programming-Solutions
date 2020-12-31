@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+  int a,b;
+  cin>>a>>b;
+ int c;
+  int d;
+  c=a+b;
+  d=abs(a-b);
+  cout<<c<<endl<<d;
+  return 0;
+}

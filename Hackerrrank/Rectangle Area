@@ -1,0 +1,24 @@
+// included in the editor 
+
+
+class Rectangle{
+  
+  public:
+  int x,y;
+  void display()
+  {
+      cout<<x<<" "<<y<<endl;
+  }
+};
+class RectangleArea :public Rectangle{
+public:
+    void read_input()
+    {
+        cin>>x>>y;
+
+    }
+    void display()
+    {
+        cout<<x*y;
+    }
+};

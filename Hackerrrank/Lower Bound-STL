@@ -1,0 +1,24 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() 
+{
+    int r,x,y;
+    cin >> r;
+    vector <int> t(r);
+    for (int i=0;i<r;i++) cin >> t[i];
+    
+    cin>>y;
+    while (y--) 
+    {
+        cin >> x;
+        auto it=lower_bound(t.begin(),t.end(),x);
+        cout << (*it==x?"Yes ":"No ") << it-t.begin()+1 << endl;
+    }
+    
+    return 0;
+}
