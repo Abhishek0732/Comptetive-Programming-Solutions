@@ -1,0 +1,33 @@
+#include<iostream>
+#include<vector>
+#include<string>
+
+using namespace std;
+
+typedef unsigned long long int ll;
+typedef vector <int> x;
+const char line = '\n';
+
+
+int main() {
+    ll m = 0;
+    for(int i = 100;i <= 999;i++)
+    {
+        for(int j = 100; j<=999;j++) {
+            string l = to_string(i * j);
+            string h = l;
+            reverse(l.begin(), l.end());
+            if (h == l)
+            {
+                if(m<stoi(l))
+                {
+                    m = stoi(l);
+                }
+
+            }
+        }
+    }
+    cout<<m;
+
+    return 0;
+}

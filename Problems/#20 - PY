@@ -1,0 +1,6 @@
+import math as m
+su = 0
+r = m.factorial(100)
+for i in list(str(r)):
+    su += int(i)
+print(su)

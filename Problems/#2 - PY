@@ -1,0 +1,13 @@
+a,b =0, 1 
+c = a + b
+arr,r = [],0
+while c <= 4000000:
+    c = a + b
+    if c%2==0:
+        arr.append(c)
+    a, b = b, c
+    
+for i in arr:
+    r+=i
+
+print(r)

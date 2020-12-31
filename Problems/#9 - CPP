@@ -1,0 +1,32 @@
+#include<iostream>
+#include<vector>
+#include<string>
+
+using namespace std;
+
+typedef unsigned long long int ll;
+typedef vector <int> x;
+const char line = '\n';
+
+
+int main() {
+    ll a,b,c;
+    ll f = 0;
+    for(int i = 1;i<=1000;i++)
+    {
+        for(int j = i;j<=1000;j++) {
+            ll x = 1000 - i - j;
+            if ((i * i + j * j) == (x * x)) {
+                cout << i * j * x;
+                f = 1;
+                break;
+            }
+            if(f==1)
+                break;
+            else
+                continue;
+        }
+
+    }
+    return 0;
+}

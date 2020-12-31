@@ -1,0 +1,6 @@
+import math as m
+su = 0
+r = 2**1000
+for i in list(str(r)):
+    su += int(i)
+print(su)

@@ -1,0 +1,101 @@
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <chrono>
+#include <cmath>
+#include <complex>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+#include <deque>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <iterator>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <ratio>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
+using namespace std;
+
+#define PI                    acos(-1.0)
+#define Pi                    3.141592653589793
+#define SQR(n)                ( n * n )
+
+#define pb                          push_back
+#define minimum(a)					*min_element(a.begin(), a.end())
+#define maximum(a)					*max_element(a.begin(), a.end())
+
+template<typename T, typename U>
+static inline void amin(T& x, U y)
+{
+	if (y < x)
+		x = y;
+}
+
+// call by reference is used in x 
+template<typename T, typename U>
+static inline void amax(T& x, U y)
+{
+	if (x < y)
+		x = y;
+}
+
+typedef long long int ll;
+typedef vector<ll> ve;
+typedef string s;
+
+ll max(ll i, ll j)
+{
+	if (i < j)
+		return j;
+	else
+	{
+		return i;
+	}
+
+}
+
+ll collatz(ll r)
+{
+	ll m = 0;
+	while (r != 1)
+	{
+		if (r % 2 == 0)
+			r = r / 2;
+		else
+		{
+			r = (3 * r + 1);
+		}
+		m += 1;
+
+	}
+	return m;
+}
+
+int main() {
+	ll  m = 1;
+	ll k = 1;
+
+	for (auto i = 0; i < 1000000; i++)
+	{
+		if(m < collatz(i))
+		{
+			m = collatz(i);
+			k = i;
+		}
+	}
+	cout << k;
+}

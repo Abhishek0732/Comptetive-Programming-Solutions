@@ -1,0 +1,31 @@
+#include<iostream>
+#include<vector>
+#include<string>
+
+using namespace std;
+
+typedef unsigned long long int ll;
+typedef vector <int> x;
+const char line = '\n';
+
+ll gcd(ll x,ll y)
+{
+    if(x==0)
+        return y;
+    else
+        return gcd(y%x,x);
+}
+ll lcm(ll a, ll b)
+{
+    return (a*b)/gcd(a, b);
+}
+
+int main() {
+    ll prod = 1;
+    for(int i = 1;i<=19;i++)
+    {
+        prod = lcm(i,prod);
+    }
+    cout<<prod;
+    return 0;
+}
