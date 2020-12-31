@@ -1,0 +1,12 @@
+class Solution {
+public:
+    vector<int> sortedSquares(vector<int>& A) 
+    {
+        vector<int> x;
+        for(auto i: A)
+            x.push_back(i*i);
+        sort(x.begin(),x.end());
+        return x;
+        
+    }
+};

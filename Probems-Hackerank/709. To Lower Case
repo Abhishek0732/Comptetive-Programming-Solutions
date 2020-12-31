@@ -1,0 +1,9 @@
+class Solution {
+public:
+    string toLowerCase(string str) {
+        string x="";
+        for(auto &i:str)
+            i=tolower(i);
+        return str;
+    }
+};
