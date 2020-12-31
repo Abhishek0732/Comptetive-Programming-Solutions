@@ -1,1 +1,1 @@
-# Hackerrank
+# Programming Solutions
